@@ -48,7 +48,7 @@ class Goban(object):
         self.is_piece_tested.append((x,y))#check if the piece have already been tested in a list.
         if piece == Status.BLACK or piece == Status.WHITE:
 
-            #Check if the piece have no possibilities at all.
+            #Check if the piece have no possibilities to move at all.
             if ( (self.get_status(x-1,y) ==  Status.OUT or self.get_status(x-1,y) ==  opposite)#left
             and  (self.get_status(x,y-1) ==  Status.OUT or self.get_status(x,y-1) ==  opposite)#bottom
             and  (self.get_status(x,y+1) ==  Status.OUT or self.get_status(x,y+1) ==  opposite)#top
